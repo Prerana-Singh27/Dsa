@@ -1,0 +1,23 @@
+//search target in index
+
+
+
+public class linearSearch {
+    public static void main(String[] args){
+        int[] arr = {45,89,76,87,99,67};
+        int target = 8;
+
+        int result = linear(arr,target);
+        System.out.println(result);
+
+    }
+
+    static int linear(int[] arr , int target){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
