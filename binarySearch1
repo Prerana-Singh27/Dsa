@@ -1,0 +1,29 @@
+//find Peak Element
+
+
+class binarySearch1 {
+    public int findPeakElement(int[] arr) {
+        int start = 0;
+        int end  = arr.length - 1;
+
+        while(start < end) {
+            int mid = start + (end - start)/2;
+
+            if(arr[mid] > arr[mid+1]) {
+                end = mid;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return start;
+    }
+    public static void main(String[] args){
+        binarySearch1 sol  = new binarySearch1();
+        int[] arr = {1,2,3,1};
+        int ans = sol.findPeakElement(arr);
+        System.out.println(ans);
+    }
+
+}
+
+
